@@ -1,27 +1,20 @@
 import React, {useState, useEffect} from 'react'
 import GiftGridItem from './GiftGridItem'
 import {getData} from './Helpers/Conection'
+import {useGiftGridItem} from './hooks/useGiftGridItem'
 
 const GifGrid = ({hero}) => {
 
-     const [imagen, setImagen] = useState([ ])
 
-
-    useEffect(()=>{
-
-        getData(hero).then(data => setImagen(data))
-        
-    },[hero])
-
-   
-
+    const {data:images , estado} = useGiftGridItem(hero)
+    
 
     return (
         
         <div className= "card-grid"> 
             
                 {
-                    imagen.map((img) =>(
+                    images.map((img) =>(
                       <GiftGridItem
                         key = { img.id}
                         {...img}
@@ -30,6 +23,8 @@ const GifGrid = ({hero}) => {
                     
                     ))
                 }
+
+              
             
         </div>
     )

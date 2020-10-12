@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Navbar';
+ import Navbar from './Navbar';
 import '../component/App.css'
 import GifGrid from './GifGrid';
 
@@ -11,9 +11,9 @@ function App() {
 
    <div className="container">
    
-      
+   <Navbar/>
       <GifGrid/>
-      <Navbar/>
+      
      
    </div>
      
