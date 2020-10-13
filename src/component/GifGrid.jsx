@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import GiftGridItem from './GiftGridItem'
-import {getData} from './Helpers/Conection'
 import {useGiftGridItem} from './hooks/useGiftGridItem'
 
 const GifGrid = ({hero}) => {

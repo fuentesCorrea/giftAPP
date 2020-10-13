@@ -10,8 +10,6 @@ import { getData } from '../Helpers/Conection'
   
     useEffect(()=>{
 
-      
-
             getData(hero).then(img => {
                 setImagen({data:img, estado: false})
             })
